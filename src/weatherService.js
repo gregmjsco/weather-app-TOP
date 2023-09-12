@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
 const API_KEY = '734b9c9d87924d27b9590108230309';
 
-const fetchWeatherData = () => {
-    fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=london`, { mode: 'cors' })
+const fetchWeatherData = (location) => {
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`, { mode: 'cors' })
         .then((response) => {
             // Check if the response status is OK (status code 200)
             if (!response.ok) {

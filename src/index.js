@@ -6,6 +6,6 @@ import  fetchWeatherData from './weatherService';
 const message = "Testing";
 
 initializePage();
-fetchWeatherData()
+fetchWeatherData();
 
 console.log(message);
