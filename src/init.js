@@ -11,31 +11,27 @@ export function initializePage() {
         const mainContent = document.createElement('div');
         mainContent.classList.add('mainContent');
 
-        // Create a form element
         const searchForm = document.createElement('form');
 
-        // Create an input field for the location
         const locationInput = document.createElement('input');
         locationInput.setAttribute('type', 'text');
         locationInput.setAttribute('placeholder', 'Enter a location...');
-        locationInput.setAttribute('id', 'locationInput'); // You can add an ID for easier access
+        locationInput.setAttribute('id', 'locationInput');
 
-        // Create a submit button
         const submitButton = document.createElement('button');
         submitButton.setAttribute('type', 'submit');
         submitButton.textContent = 'Search';
 
-        // Append input and button to the form
         searchForm.appendChild(locationInput);
         searchForm.appendChild(submitButton);
 
         searchForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent the default form submission
-            const userInput = locationInput.value; // Get the user's input
-            fetchWeatherData(userInput); // Call fetchWeatherData with the user's input
+            e.preventDefault(); 
+            const userInput = locationInput.value;
+            fetchWeatherData(userInput);
         });
 
-        // Append the form and main content to the container
+
         mainContent.appendChild(searchForm);
         container.appendChild(header);
         container.appendChild(mainContent);
