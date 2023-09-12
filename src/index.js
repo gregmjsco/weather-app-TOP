@@ -1,11 +1,11 @@
 import './styles.css';
 import { initializePage } from './init';
-import fetchWeatherData from './weatherService';
+import  fetchWeatherData from './weatherService';
 
 
 const message = "Testing";
 
 initializePage();
-fetchWeatherData();
+fetchWeatherData()
 
 console.log(message);

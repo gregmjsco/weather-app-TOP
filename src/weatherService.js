@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const API_KEY = '734b9c9d87924d27b9590108230309';
 
 const fetchWeatherData = () => {
